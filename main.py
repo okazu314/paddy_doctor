@@ -12,14 +12,14 @@ from sklearn.metrics import recall_score
 #from torchvision import transforms
 #from tqdm import tqdm
 import matplotlib.pyplot as plt
-from utils.Dataloader import AAI2021Dataset
+from utils.Dataloader import PaddyDataset
 # from models.nnmodels import nnmodels モデルの呼び出しに使っていたが，今回は使わない
 
 loss_list = []
 val_loss_list = []
-acc_val_list = []
+val_acc_list = []
 test_loss_list = []
-acc_test_list = []
+test_acc_list = []
 
 def train(epoch):
     model.train()
@@ -53,17 +53,18 @@ def val():
         correct += pred.eq(label.data.view_as(pred)).long().cpu().sum()
         
     acc=100. * correct / len(val_loader.dataset)
+    # 後であってるかどうか確認
     val_loss /= len(val_loader.dataset)
     print('\nVal set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),
         acc))
     val_loss_list.append(val_loss)
-    acc_val_list.append(acc)
+    val_acc_list.append(acc)
     return acc
 
 def test():
     model.eval()
-    val_loss = 0
+    test_loss = 0
     correct = 0
     for (image, label) in test_loader:
         image, label = Variable(image.float(), volatile=True), Variable(label)
@@ -73,14 +74,14 @@ def test():
         pred = output.data.max(1, keepdim=True)[1] # get the index of the max log-probability
         correct += pred.eq(label.data.view_as(pred)).long().cpu().sum()
         
-    recall = recall_score(y_true=label.cpu(), y_pred=pred.cpu(), pos_label=1) # recallの計算
+    # recall = recall_score(y_true=label.cpu(), y_pred=pred.cpu(), pos_label=1) # recallの計算
     acc=100. * correct / len(test_loader.dataset) # 正解率の計算
     test_loss /= len(test_loader.dataset)
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%), Recall: {}\n'.format(
         test_loss, correct, len(test_loader.dataset),
         acc, recall))
     #test_loss_list.append(test_loss)
-    #acc_test_list.append(acc)
+    #test_acc_list.append(acc)
 
 # config
 #INPUT_DIR = './Dataset/'
@@ -103,9 +104,9 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # GPUが�
 epoch = 30 # エポック数の設定
 
 # Dataloaderの呼び出し
-train_data = AAI2021Dataset(train_Dir,Image_DIR)
-test_data = AAI2021Dataset(test_Dir,Image_DIR)
-val_data = AAI2021Dataset(val_Dir,Image_DIR)
+train_data = PaddyDataset(train_Dir,Image_DIR)
+test_data = PaddyDataset(test_Dir,Image_DIR)
+val_data = PaddyDataset(val_Dir,Image_DIR)
 
 train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=32, shuffle=True)
@@ -120,13 +121,13 @@ model.to(device)
 
 # 事前学習済みresnet50を利用
 model = torchvision.models.resnet50(pretrained = True)
-model.fc = nn.Linear(model.fc.in_features, 2)
+model.fc = nn.Linear(model.fc.in_features, 10)
 model.to(device)
 
 # 事前学習済みEfficientNetを利用
 '''
 model = EfficientNet.from_pretrained('efficientnet-b7')
-model._fc = nn.Linear(model._fc.in_features, 2)
+model._fc = nn.Linear(model._fc.in_features, 10)
 model.to(device)
 '''
 
