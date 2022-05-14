@@ -26,14 +26,15 @@ class PaddyDataset(Dataset):
     def __getitem__(self, idx):
         #dataframeから画像へのパスとラベルを読み出す
         label = self.image_dataframe.iat[idx, 1]
-        img_name = os.path.join(self.root_dir, self.image_dataframe.iat[idx, 0])
+        name = self.image_dataframe.iat[idx, 0]
+        img_name = os.path.join(self.root_dir, name)
         # 品種
         # 年齢
         
         #画像の読み込み
         image = io.imread(img_name)
 
-        return image, img_name, label, variety, age
+        return image, name, label, variety, age
 
 
 
