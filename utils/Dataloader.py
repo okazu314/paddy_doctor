@@ -33,7 +33,7 @@ class PaddyDataset(Dataset):
         #画像の読み込み
         image = io.imread(img_name)
 
-        return image, label, variety, age
+        return image, img_name, label, variety, age
 
 
 
