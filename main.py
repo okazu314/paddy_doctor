@@ -13,7 +13,7 @@ from sklearn.metrics import recall_score
 #from tqdm import tqdm
 import matplotlib.pyplot as plt
 from utils.Dataloader import AAI2021Dataset
-from models.nnmodels import nnmodels
+# from models.nnmodels import nnmodels モデルの呼び出しに使っていたが，今回は使わない
 
 loss_list = []
 val_loss_list = []
@@ -86,20 +86,18 @@ def test():
 #INPUT_DIR = './Dataset/'
 OUTPUT_DIR = './output/'
 #Image_DIR=INPUT_DIR + 'Data/'
+
 # Dataset
-#Image_DIR=INPUT_DIR + 'Data2/' #test(抽出なし)の時はこれ
+# 今回のデータ用に書き換える
+Image_DIR=INPUT_DIR + 'Data2/' #test(抽出なし)の時はこれ
 #train_Dir = INPUT_DIR+'train.csv' # train水増し付き（古）
-#train_Dir = INPUT_DIR+'train_not_aug.csv' # train水増しなし（古）
-#val_Dir = INPUT_DIR+'val.csv' # 評価データ
-#test_Dir = INPUT_DIR+'test.csv' # テストデータ(抽出なし)
-#test_Dir = INPUT_DIR+'test_scrutiny.csv' # テストデータ（抽出あり）
-# ExDataset
-INPUT_DIR = './ExDataset/'
-Image_DIR=INPUT_DIR + 'Data/'
-val_Dir = INPUT_DIR+'val.csv' # 評価データ
-train_Dir = INPUT_DIR+'train.csv'
-test_Dir = INPUT_DIR+'test.csv'
-test_Dir = INPUT_DIR+'test_scrutiny.csv'
+train_Dir = INPUT_DIR+'train_not_aug.csv' # train水増しなし（古）
+
+# trainとvalの分割用コードを追加
+
+
+test_Dir = INPUT_DIR+'test.csv' # テストデータ(抽出なし)
+test_Dir = INPUT_DIR+'test_scrutiny.csv' # テストデータ（抽出あり）
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # GPUがあるなら使用する
 epoch = 30 # エポック数の設定
@@ -114,6 +112,7 @@ test_loader = DataLoader(test_data, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_data,batch_size=32, shuffle=True)
 
 # 自作モデルの設定
+# 今回は使わない
 '''
 model = nnmodels()
 model.to(device)
