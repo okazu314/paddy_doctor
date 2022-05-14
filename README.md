@@ -46,3 +46,4 @@ https://www.kaggle.com/competitions/paddy-disease-classification/overview
         3,469枚のテスト画像が入っている．
 
 # 問題点
+    画像の入力
