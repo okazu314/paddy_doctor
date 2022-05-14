@@ -7,6 +7,21 @@ https://www.kaggle.com/competitions/paddy-disease-classification/overview
 
 実行環境：Kaggle Notebook
 
+# スケジュール
+5/14 チーム開発環境の構築
+
+5/20 Kaggle Notebook でmain.pyを動かす
+
+5/27 mainプログラムでのエラーがゼロ。改善のアイデアだし。
+
+6/3 アイデアを反映したプログラム作成
+
+6/10 アイデアを反映したプログラム実装
+
+6/17 spyral3
+
+6/24(最終日) spyral 3
+
 # データ
     train.csv
         image_id：各画像を識別するためのID．train_imagesディレクトリに.jpg形式で入っている．
