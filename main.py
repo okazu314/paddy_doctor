@@ -72,6 +72,8 @@ def test():
         output = model(image)
         test_loss += criterion(output, label) # sum up batch loss
         pred = output.data.max(1, keepdim=True)[1] # get the index of the max log-probability
+        # testcsvファイルに記録する処理を追加
+        
         correct += pred.eq(label.data.view_as(pred)).long().cpu().sum()
         
     # recall = recall_score(y_true=label.cpu(), y_pred=pred.cpu(), pos_label=1) # recallの計算
@@ -90,13 +92,15 @@ OUTPUT_DIR = './output/'
 
 # Dataset
 # 今回のデータ用に書き換える
+# もしもtrain2とvalが存在しない場合実行
+
+# trainとvalの分割用コードを追加(8:2)
+# 出力はtrain2とval
+
 Image_DIR=INPUT_DIR + 'Data2/' #test(抽出なし)の時はこれ
 #train_Dir = INPUT_DIR+'train.csv' # train水増し付き（古）
 train_Dir = INPUT_DIR+'train_not_aug.csv' # train水増しなし（古）
-
-# trainとvalの分割用コードを追加
-
-
+val_Dir
 test_Dir = INPUT_DIR+'test.csv' # テストデータ(抽出なし)
 test_Dir = INPUT_DIR+'test_scrutiny.csv' # テストデータ（抽出あり）
 
