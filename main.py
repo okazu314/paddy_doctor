@@ -24,10 +24,10 @@ val_acc_list = []
 
 def train(epoch):
     model.train()
-    for batch_idx, (image, name,label, variety ,age) in enumerate(train_loader):
+    for batch_idx, (image, name, label, variety ,age) in enumerate(train_loader):
         image, label = Variable(image), Variable(label)
         optimizer.zero_grad()
-        image=image.permute(0,3,1,2)
+        image=image.permute(0, 3, 1, 2)
         #image=torch.from_numpy(image).float()
         output = model(image.float())
         loss = criterion(output, label)
@@ -45,7 +45,7 @@ def val():
     model.eval()
     val_loss = 0
     correct = 0
-    for (image, name,label, variety ,age) in val_loader:
+    for (image, name, label, variety , age) in val_loader:
         image, label = Variable(image.float(), requires_grad=True), Variable(label)
         image=image.permute(0,3,1,2)
         output = model(image)
@@ -69,12 +69,12 @@ def test():
     correct = 0
     for (image, name,label, variety ,age) in test_loader:
         image, label = Variable(image.float(), volatile=True), Variable(label)
-        image=image.permute(0,3,1,2)
+        image=image.permute(0, 3, 1, 2)
         output = model(image)
         test_loss += criterion(output, label) # sum up batch loss
         _, pred = torch.max(output.data, 1) # get the index of the max log-probability
         # testcsvファイルに記録する処理を追加
-        make_tesy_csv(name,pred)
+        make_test_csv(name, pred)
         correct += (pred == label).sum().item()
         
     # recall = recall_score(y_true=label.cpu(), y_pred=pred.cpu(), pos_label=1) # recallの計算
@@ -85,7 +85,7 @@ def test():
 
 # config
 INPUT_DIR = '/kaggle/input/paddydiseaseclassification/'
-OUTPUT_DIR = './kaggle/output/'
+OUTPUT_DIR = '/kaggle/output/'
 #Image_DIR=INPUT_DIR + 'Data/'
 
 # Dataset
@@ -95,7 +95,7 @@ OUTPUT_DIR = './kaggle/output/'
 # trainとvalの分割用コードを追加(8:2)
 # 出力はtrain2とval
 if not os.path.exists(INPUT_DIR+'train2.csv') and os.path.exists(INPUT_DIR+'val.csv'):
-    Separate_data(INPUT_DIR+'/tarin.csv')
+    Separate_data(INPUT_DIR+'/train.csv')
 
 Train_Image_DIR=INPUT_DIR + 'train_images/'
 Test_Image_DIR=INPUT_DIR + 'test_images/' #test(抽出なし)の時はこれ
@@ -109,13 +109,13 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') # GPUが�
 epoch = 30 # エポック数の設定
 
 # Dataloaderの呼び出し
-train_data = PaddyDataset(train_Dir,Train_Image_DIR)
-test_data = PaddyDataset(test_Dir,Train_Image_DIR)
-val_data = PaddyDataset(val_Dir,Test_Image_DIR)
+train_data = PaddyDataset(train_Dir, Train_Image_DIR)
+test_data = PaddyDataset(test_Dir, Train_Image_DIR)
+val_data = PaddyDataset(val_Dir, Test_Image_DIR)
 
 train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=32, shuffle=True)
-val_loader = DataLoader(val_data,batch_size=32, shuffle=True)
+val_loader = DataLoader(val_data, batch_size=32, shuffle=True)
 
 # 自作モデルの設定
 # 今回は使わない
