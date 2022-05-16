@@ -82,6 +82,12 @@ def test():
     test_loss /= len(test_loader.dataset)
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),acc))
+    
+#テスト結果格納する
+def make_test_csv(name,label):  #画像名，推定された分類結果
+    with open('output_test_eval.csv','a') as f:
+        writer=csv.writer(f,lineterminator="\n")
+        writer.writerow([name,label])
 
 # config
 INPUT_DIR = '/kaggle/input/paddydiseaseclassification/'
