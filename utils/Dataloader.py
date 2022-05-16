@@ -33,7 +33,7 @@ class PaddyDataset(Dataset):
         #稲の品種
         variety = self.image_dataframe.iat[idx, 2]
         #年齢
-        name = self.image_dataframe.iat[idx, 3]
+        age = self.image_dataframe.iat[idx, 3]
        
         #画像の読み込み
         image = io.imread(img_name)
