@@ -23,14 +23,18 @@ class PaddyDataset(Dataset):
     def __len__(self):
         return len(self.image_dataframe)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, idx): #idx=画像データセットのパス
         #dataframeから画像へのパスとラベルを読み出す
-        label = self.image_dataframe.iat[idx, 1]
+        #画像名
         name = self.image_dataframe.iat[idx, 0]
         img_name = os.path.join(self.root_dir, name)
-        # 品種
-        # 年齢
-        
+        #画像のクラスラベル
+        label = self.image_dataframe.iat[idx, 1]
+        #稲の品種
+        label = self.image_dataframe.iat[idx, 2]
+        #年齢
+        label = self.image_dataframe.iat[idx, 3]
+       
         #画像の読み込み
         image = io.imread(img_name)
 
