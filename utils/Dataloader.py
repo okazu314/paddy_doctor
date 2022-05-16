@@ -31,9 +31,9 @@ class PaddyDataset(Dataset):
         #画像のクラスラベル
         label = self.image_dataframe.iat[idx, 1]
         #稲の品種
-        label = self.image_dataframe.iat[idx, 2]
+        variety = self.image_dataframe.iat[idx, 2]
         #年齢
-        label = self.image_dataframe.iat[idx, 3]
+        name = self.image_dataframe.iat[idx, 3]
        
         #画像の読み込み
         image = io.imread(img_name)
