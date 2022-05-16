@@ -86,7 +86,7 @@ def test():
     
 #テスト結果格納する
 def make_test_csv(name,label):  #画像名，推定された分類結果
-    with open('output_test_eval.csv','a') as f: #ファイルに上書きする（既にあるデータ消さない）
+    with open('../output/submission.csv','a') as f: #ファイルに上書きする（既にあるデータ消さない）
         writer=csv.writer(f,lineterminator="\n")   
         writer.writerow([name,label])   #1行ずつ記録
         ##保存したいデータ：200001.jpg,normal
@@ -180,7 +180,7 @@ plt.grid()
 plt.show()
 
 #テスト結果を記録するファイル作成
-with open('output_test_eval.csv','w') as f: #新規作成．（既にファイルある場合はファイルの中身が消えてしまうので注意）
+with open('../output/submission.csv','w') as f: #新規作成．（既にファイルある場合はファイルの中身が消えてしまうので注意）
     writer=csv.writer(f)
     writer.writerow(["image_id","label"])
     
