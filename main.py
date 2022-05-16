@@ -17,6 +17,7 @@ from utils.Dataloader import PaddyDataset
 import utils.Separate_data as Separate_data
 import utils.make_test_csv as make_test_csv
 # from models.nnmodels import nnmodels モデルの呼び出しに使っていたが，今回は使わない
+import cv2  #テスト結果記録のファイル処理に使用
 
 loss_list = []
 val_loss_list = []
@@ -85,9 +86,10 @@ def test():
     
 #テスト結果格納する
 def make_test_csv(name,label):  #画像名，推定された分類結果
-    with open('output_test_eval.csv','a') as f:
-        writer=csv.writer(f,lineterminator="\n")
-        writer.writerow([name,label])
+    with open('output_test_eval.csv','a') as f: #ファイルに上書きする（既にあるデータ消さない）
+        writer=csv.writer(f,lineterminator="\n")   
+        writer.writerow([name,label])   #1行ずつ記録
+        ##保存したいデータ：200001.jpg,normal
 
 # config
 INPUT_DIR = '/kaggle/input/paddydiseaseclassification/'
@@ -177,6 +179,11 @@ plt.ylabel('acc')
 plt.grid()
 plt.show()
 
+#テスト結果を記録するファイル作成
+with open('output_test_eval.csv','w') as f: #新規作成．（既にファイルある場合はファイルの中身が消えてしまうので注意）
+    writer=csv.writer(f)
+    writer.writerow(["image_id","label"])
+    
 # テストの実行
 model.load_state_dict(torch.load(OUTPUT_DIR + 'best.pth'))
 test()
