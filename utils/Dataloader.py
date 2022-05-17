@@ -11,6 +11,7 @@ from torchvision import transforms
 #from tqdm import tqdm
 import matplotlib.pyplot as plt
 from skimage import io
+from skimage.transform import resize
 
 class PaddyDataset(Dataset):
     def __init__(self, csv_file_path, root_dir, transform=None):
@@ -37,6 +38,7 @@ class PaddyDataset(Dataset):
        
         #画像の読み込み
         image = io.imread(img_name)
+        image = resize(image,(600,600),anti_aliasing=True)
 
         return image, name, label, variety, age
 
