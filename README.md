@@ -14,7 +14,7 @@ https://www.kaggle.com/competitions/paddy-disease-classification/overview
     - 太田：Kaggle Notebook　でmainプログラム動くように移植する
 
 - 5/20 Kaggle Notebook でmain.pyを動かしてみる（エラーあっていい）
-    - 皆：エラー修正を行う
+    - 皆：エラー修正を行う(テストデータ用ローダー(TestDataset.py)の作成＋def test()の修正)
     - エラー修正終わったら、改善のアイデア出し
 
 - 5/27 mainプログラムでのエラーがゼロ。改善のアイデアだし。
