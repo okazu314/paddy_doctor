@@ -17,7 +17,7 @@ from utils.Dataloader import PaddyDataset
 import utils.Separate_data as Separate_data
 import utils.make_test_csv as make_test_csv
 # from models.nnmodels import nnmodels モデルの呼び出しに使っていたが，今回は使わない
-import cv2  #テスト結果記録のファイル処理に使用
+import csv  #テスト結果記録のファイル処理に使用
 
 loss_list = []
 val_loss_list = []
