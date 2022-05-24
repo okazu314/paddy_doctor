@@ -8,4 +8,4 @@
   - 90分ぐらいで様子を見るようにする。
 
 - v12を実行して得た重みの保存先
-  - Seminar/M1_Tajima/M1/paddy_doctor/v12
+  - Seminar/M1_Tajima/M1/paddy_doctor/v12/best.pth
