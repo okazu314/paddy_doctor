@@ -1,5 +1,5 @@
 - 実行時間
-  - 20エポックで、約10時間30分(GPU使用)
+  - 20エポックで、約11時間(GPU使用)
 
 - OutPutにファイルない？
   - Output 右の、"Refresh derectry contents"のボタンを押せば結果ファイルなど出力される
