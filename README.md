@@ -28,10 +28,16 @@ EfficientNet-b4を利用し，21エポックで行った．
 
 （学習曲線を貼る）
 
-## 三回目の提出(v16)
+## 三回目の提出（v16）
 DeiT-baseを利用し，20エポックで行った．
 
 正答率95.847程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___10_4](https://user-images.githubusercontent.com/74422064/171313825-1c99b8e2-4d72-4b47-84e3-7a052d279126.png)
+
+### エポックごとのvalidation accuracy
+![__results___10_5](https://user-images.githubusercontent.com/74422064/171313848-1edfec0e-6ca1-4bdd-9b9a-13df818f8bfe.png)
 
 # スケジュール
 - 5/14 チーム開発環境の構築
