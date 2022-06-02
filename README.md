@@ -39,6 +39,19 @@ DeiT-baseを利用し，20エポックで行った．
 ### エポックごとのvalidation accuracy
 ![__results___10_5](https://user-images.githubusercontent.com/74422064/171313848-1edfec0e-6ca1-4bdd-9b9a-13df818f8bfe.png)
 
+## 四回目の提出(v17)
+EfficientNet-b4を利用し，20エポックで行った．
+損失関数を，Adam．テストの重みを、検証での最良値から最終エポックでの重みに変更。
+
+正答率 97.231％程度で、チームベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___10_4]()
+
+### エポックごとのvalidation accuracy
+![__results___10_5]()
+
+
 # スケジュール
 - 5/14 チーム開発環境の構築
     - trainデータをtrainとvaridの２つに分ける関数作成
