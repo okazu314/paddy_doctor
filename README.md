@@ -46,7 +46,7 @@ EfficientNet-b4を利用し，20エポックで行った．
 正答率 97.231％程度で、チームベストを更新することができなかった．
 
 ### エポックごとの損失
-![__results___10_6](![__results___10_4](https://user-images.githubusercontent.com/88838187/171522111-7b47bbed-acc7-4e82-9e7e-0fa883297120.png))
+![__results___10_4](![__results___10_4](https://user-images.githubusercontent.com/88838187/171522111-7b47bbed-acc7-4e82-9e7e-0fa883297120.png))
 
 ### エポックごとのvalidation accuracy
 ![__results___10_5]()
