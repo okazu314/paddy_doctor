@@ -49,7 +49,7 @@ EfficientNet-b4を利用し，20エポックで行った．
 ![__results___10_6](https://user-images.githubusercontent.com/88838187/171522111-7b47bbed-acc7-4e82-9e7e-0fa883297120.png)
 
 ### エポックごとのvalidation accuracy
-![__results___10_5]()
+![__results___10_7](https://user-images.githubusercontent.com/88838187/171522493-7b51080d-ae8e-44ac-9160-b3b0dc052e31.png)
 
 
 # スケジュール
