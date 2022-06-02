@@ -7,6 +7,8 @@ Score: 0.95040
   - model = EfficientNet.from_pretrained('efficientnet-b4')
 - 損失関数
   - optimizer = torch.optim.AdamW(model.parameters(),lr=0.001)
+  - https://github.com/pytorch/pytorch/pull/50620
+  - https://pytorch.org/vision/stable/models.html
 
 ## Error
 - message
