@@ -64,6 +64,17 @@ EfficientNet-b4、最適化関数AdamW(lr=0.001), 10epoch実行した。
 ### エポックごとのvalidation accuracy
 ![__results___10_9](output/v19//__results___10_5.png)
 
+## 7回目の提出(v20)
+EfficientNet-b4、最適化関数AdamW(lr=0.0001), 10epoch実行した。
+
+ベストの重みを使用した正答率は97.424%であり、10エポック目の重みを使用した正答率は97.424%であった。
+
+### エポックごとの損失
+![__results___10_10](output/v20/__results___10_4.png)
+
+### エポックごとのvalidation accuracy
+![__results___10_11](output/v20//__results___10_5.png)
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
