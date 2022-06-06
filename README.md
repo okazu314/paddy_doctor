@@ -53,6 +53,9 @@ EfficientNet-b4を利用し，20エポックで行った．
 ### エポックごとのvalidation accuracy
 ![__results___10_7](https://user-images.githubusercontent.com/88838187/171522493-7b51080d-ae8e-44ac-9160-b3b0dc052e31.png)
 
+## 5回目の提出？？
+森永君書きますか？ここでなく下記で書く場合は削除をお願いします。
+
 ## 6回目の提出(v19)
 EfficientNet-b4、最適化関数AdamW(lr=0.001), 10epoch実行した。
 
@@ -68,6 +71,8 @@ EfficientNet-b4、最適化関数AdamW(lr=0.001), 10epoch実行した。
 EfficientNet-b4、最適化関数AdamW(lr=0.0001), 10epoch実行した。
 
 ベストの重みを使用した正答率は97.424%であり、10エポック目の重みを使用した正答率は97.424%であった。
+
+チームベストを更新した。
 
 ### エポックごとの損失
 ![__results___10_10](output/v20/__results___10_4.png)
