@@ -85,6 +85,12 @@ EfficientNet-b4、最適化関数Adam(lr=0.00001), 10epoch実行した。
 
 ベストの重みを使用した正答率は96.001%であり、0.96001
 
+### エポックごとの損失
+![__results___10_12](output/v21/__results___10_4.png)
+
+### エポックごとのvalidation accuracy
+![__results___10_13](output/v21//__results___10_5.png)
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
