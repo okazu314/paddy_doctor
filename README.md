@@ -53,8 +53,10 @@ EfficientNet-b4を利用し，20エポックで行った．
 ### エポックごとのvalidation accuracy
 ![__results___10_7](https://user-images.githubusercontent.com/88838187/171522493-7b51080d-ae8e-44ac-9160-b3b0dc052e31.png)
 
-## 5回目の提出？？
-森永君書きますか？ここでなく下記で書く場合は削除をお願いします。
+## 5回目の提出(v18)
+Cait-S24を利用し，20エポックで行った．
+
+正答率93.348程度で，ベストを更新することができなかった．
 
 ## 6回目の提出(v19)
 EfficientNet-b4、最適化関数AdamW(lr=0.001), 10epoch実行した。
