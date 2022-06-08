@@ -93,6 +93,14 @@ EfficientNet-b4、最適化関数Adam(lr=0.00001), 10epoch実行した。
 ### エポックごとのvalidation accuracy
 ![__results___10_13](output/v21//__results___10_5.png)
 
+## 9回目(v22)
+EfficientNet-b4，最適化関数RAdam(lr=0.001)，15epoch実行した．
+
+### エポックごとの損失
+
+
+### エポックごとのvalidation accuracy
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
