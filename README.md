@@ -102,6 +102,18 @@ EfficientNet-b4，最適化関数RAdam(lr=0.001)，15epoch実行した．
 ### エポックごとのvalidation accuracy
 ![val_acc](https://user-images.githubusercontent.com/74422064/172550721-d3c83658-f561-4d1c-85a1-25aed53a02ce.PNG)
 
+## 10回目の提出(v23)
+EfficientNet-b4、最適化関数AdamW(lr=0.0001), 20epoch実行した。
+
+ベストの重みを使用した正答率は97.270%であり、10エポック目の重みを使用した正答率は97.424%であった。
+
+### エポックごとの損失
+![__results___10_14](output/v23/__results___10_4.png)
+
+### エポックごとのvalidation accuracy
+![__results___10_15](output/v23//__results___10_5.png)
+
+
 # スケジュール
 - 5/14 チーム開発環境の構築
     - trainデータをtrainとvaridの２つに分ける関数作成
