@@ -1,5 +1,6 @@
 ## 結果
 - Score: 0.97270  (best.pth)
+- Score: 0.97770  (20epoch.pth)
 
 ## 設定
 - model = EfficientNet.from_pretrained('efficientnet-b4')
