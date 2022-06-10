@@ -54,7 +54,7 @@ EfficientNet-b4を利用し，20エポックで行った．
 ![__results___10_7](https://user-images.githubusercontent.com/88838187/171522493-7b51080d-ae8e-44ac-9160-b3b0dc052e31.png)
 
 ## 5回目の提出(v18)
-Cait-S24を利用し，20エポックで行った．
+Cait-S24を利用し，Adamを用い，20エポックで行った．
 
 正答率93.348程度で，ベストを更新することができなかった．
 
@@ -116,7 +116,7 @@ EfficientNet-b4、最適化関数AdamW(lr=0.0001), 20epoch実行した。
 ![__results___10_15](output/v23//__results___10_5.png)
 
 ## 11回目の提出(v24)
-Cait-S24を利用し，20エポックで行った．
+Cait-S24を利用し，AdamWを用い，20エポックで行った．
 
 正答率95.655程度で，ベストを更新することができなかった．
 
