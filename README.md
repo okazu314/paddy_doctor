@@ -115,6 +115,17 @@ EfficientNet-b4、最適化関数AdamW(lr=0.0001), 20epoch実行した。
 ### エポックごとのvalidation accuracy
 ![__results___10_15](output/v23//__results___10_5.png)
 
+## 11回目の提出(v24)
+Cait-S24を利用し，20エポックで行った．
+
+正答率95.655程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___10_4](https://user-images.githubusercontent.com/74422064/173059012-d1f388e5-73a2-4b67-ad14-c958fd4d0c0b.png)
+
+### エポックごとのvalidation accuracy
+![__results___10_5](https://user-images.githubusercontent.com/74422064/173059021-52ea1325-6b19-41f1-b9f8-110f57aceab1.png)
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
