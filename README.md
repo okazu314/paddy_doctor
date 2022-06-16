@@ -126,6 +126,17 @@ Cait-S24を利用し，AdamWを用い，20エポックで行った．
 ### エポックごとのvalidation accuracy
 ![__results___10_5](https://user-images.githubusercontent.com/74422064/173059021-52ea1325-6b19-41f1-b9f8-110f57aceab1.png)
 
+## 13回目の提出(v26)
+Cait-S24を利用し，RAdam(lr=1e-5)を用い，10エポックで行った．
+
+正答率92.810程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___11_3](https://user-images.githubusercontent.com/74422064/174045616-271b51fe-3812-4a5c-b6e8-05c68a29d744.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_4](https://user-images.githubusercontent.com/74422064/174045624-d43e30bb-b9fc-4148-bf05-8dc39a1348a3.png)
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
