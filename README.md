@@ -183,6 +183,15 @@ efficientnetv2を利用し，RAdam(lr=1e-4)を用い，バッチサイズ32で�
 ### エポックごとのvalidation accuracy
 ![__results___11_4](https://user-images.githubusercontent.com/74422064/175494704-e44e8f9d-c7d2-44aa-ab54-afa17c8d90c7.png)
 
+## 17回目の提出(v31)
+efficientnetv2を利用し，RAdam(lr=1e-3)を用い，バッチサイズ32で，20エポックで行った．
+
+正答率89.388程度で，ベストを更新することができなかった．
+### エポックごとの損失
+![__results___11_3](https://user-images.githubusercontent.com/74422064/175767898-bde4bed3-ee2b-4344-bf43-380a8ff959bb.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_4](https://user-images.githubusercontent.com/74422064/175767901-59a67eec-b935-4d05-93f3-6c050ad243d9.png)
 
 
 # スケジュール
