@@ -193,6 +193,17 @@ efficientnetv2を利用し，RAdam(lr=1e-3)を用い，バッチサイズ32で�
 ### エポックごとのvalidation accuracy
 ![__results___11_4](https://user-images.githubusercontent.com/74422064/175767901-59a67eec-b935-4d05-93f3-6c050ad243d9.png)
 
+## 18回目の提出(v35)
+Swinを利用し，RAdam(lr=1e-3)を用い，バッチサイズ32で，20エポックで行った．
+
+正答率96.847程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___11_2](https://user-images.githubusercontent.com/74422064/175799214-a7a8ffba-444f-4da6-a348-ea5679a221c5.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_3](https://user-images.githubusercontent.com/74422064/175799215-0e1c3ac6-6eda-4098-bf7e-27bf10132f6c.png)
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
