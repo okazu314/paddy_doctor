@@ -209,6 +209,14 @@ efficientnet-b4を利用し、RAdam(lr=0.001)を用い、バッチサイズ16,20
 
 正解率97.270程度で，ベストを更新することができなかった．
 
+### エポックごとの損失
+![__results___11_2](https://github.com/okazu314/paddy_doctor/blob/main/output/v34/__results___11_4.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_3](https://github.com/okazu314/paddy_doctor/blob/main/output/v34/__results___11_5.png)
+
+
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
