@@ -204,6 +204,11 @@ Swinを利用し，RAdam(lr=1e-3)を用い，バッチサイズ32で，20エポ�
 ### エポックごとのvalidation accuracy
 ![__results___11_3](https://user-images.githubusercontent.com/74422064/175799215-0e1c3ac6-6eda-4098-bf7e-27bf10132f6c.png)
 
+## 18回目の提出(v34)
+efficientnet-b4を利用し、RAdam(lr=0.001)を用い、バッチサイズ16,20エポック行った。
+
+正解率97.270程度で，ベストを更新することができなかった．
+
 
 # スケジュール
 - 5/14 チーム開発環境の構築
