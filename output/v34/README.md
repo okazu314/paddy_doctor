@@ -1,0 +1,7 @@
+## スコア
+  - Score: 0.97270
+## 設定
+  - model = EfficientNet.from_pretrained('efficientnet-b4')
+  - optimizer = torch.optim.RAdam(model.parameters(),lr=0.001)
+  - 20epoch
+  
