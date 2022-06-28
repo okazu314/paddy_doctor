@@ -231,6 +231,39 @@ efficientnet-b5を利用し、AdamW(lr=0.001)を用い、バッチサイズ8,20(
 
 正解率 97.001程度で，ベストを更新することができなかった．
 
+## 22回目の提出(v38)
+Swinを利用し，RAdam(lr=1e-4)を用い，バッチサイズ32で，30エポックで行った．
+
+正答率97.693程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___11_2](https://user-images.githubusercontent.com/74422064/176165797-aff5995f-5ddc-4ea6-838c-67c9c8104443.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_3](https://user-images.githubusercontent.com/74422064/176165799-ad90e6ae-6028-4f79-a84e-8a08c2d303fd.png)
+
+## 23回目の提出(v40)
+Swinを利用し，RAdam(lr=1e-3)を用い，バッチサイズ32で，30エポックで行った．
+
+正答率96.270程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___11_2](https://user-images.githubusercontent.com/74422064/176165331-8653dfa3-5170-4455-8ae8-3e563b60778b.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_3](https://user-images.githubusercontent.com/74422064/176165335-aefe6319-c770-478f-8c1a-5fb26ed51115.png)
+
+## 24回目の提出(v41)
+Swinを利用し，AdamW(lr=1e-4)を用い，バッチサイズ32で，30エポックで行った．
+
+正答率97.654程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___11_2](https://user-images.githubusercontent.com/74422064/176164650-fe67d7ea-5554-4a88-93bf-02e507057e2b.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_3](https://user-images.githubusercontent.com/74422064/176164661-0a49c36e-acd2-4bea-a9a5-ae3c0a58d161.png)
+
 # スケジュール
 - 5/14 チーム開発環境の構築
     - trainデータをtrainとvaridの２つに分ける関数作成
