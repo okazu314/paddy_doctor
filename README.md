@@ -227,7 +227,7 @@ efficientnet-b4を利用し、RAdam(lr=0.001)を用い、バッチサイズ16,20
 ![__results___11_3](https://github.com/okazu314/paddy_doctor/blob/main/output/v34/__results___11_5.png)
 
 ## 21回目の提出(v39)
-efficientnet-b5を利用し、AdamW(lr=0.0001)を用い、バッチサイズ8,20(実際は14エポック目で停止）エポック行った。
+efficientnet-b5を利用し、AdamW(lr=0.001)を用い、バッチサイズ8,20(実際は14エポック目で停止）エポック行った。
 
 正解率 97.001程度で，ベストを更新することができなかった．
 
