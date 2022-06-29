@@ -269,6 +269,8 @@ efficientnet-b5を利用し、RAdam(lr=0.0001)を用い、バッチサイズ16,1
 
 正解率97.308程度で，ベストを更新することができなかった．
 
+(10epoch -> Score: 0.97231)
+
 ### エポックごとの損失
 ![__results___11_2](https://github.com/okazu314/paddy_doctor/blob/main/output/v42/__results___11_3.png)
 
