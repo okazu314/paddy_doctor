@@ -264,6 +264,17 @@ Swinを利用し，AdamW(lr=1e-4)を用い，バッチサイズ32で，30エポ�
 ### エポックごとのvalidation accuracy
 ![__results___11_3](https://user-images.githubusercontent.com/74422064/176164661-0a49c36e-acd2-4bea-a9a5-ae3c0a58d161.png)
 
+## 25回目の提出(v42)
+efficientnet-b5を利用し、RAdam(lr=0.0001)を用い、バッチサイズ16,10エポック行った。
+
+正解率97.308程度で，ベストを更新することができなかった．
+
+### エポックごとの損失
+![__results___11_2](https://github.com/okazu314/paddy_doctor/blob/main/output/v42/__results___11_4.png)
+
+### エポックごとのvalidation accuracy
+![__results___11_3](https://github.com/okazu314/paddy_doctor/blob/main/output/v42/__results___11_5.png)
+
 # スケジュール
 - 5/14 チーム開発環境の構築
     - trainデータをtrainとvaridの２つに分ける関数作成
